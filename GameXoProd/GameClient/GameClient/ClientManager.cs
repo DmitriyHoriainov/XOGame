@@ -21,7 +21,7 @@ namespace GameClient
 
         public void Connect(string name, PlayersList pl)
         {
-            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8888);   ////////////
+            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8888);   
             client = new TcpClient();
             client.Connect(ipe);
             netStream = client.GetStream();
@@ -72,7 +72,9 @@ namespace GameClient
                         break;
                     case "gamexo":
                         game.ReceiveGameData(output);
+                    //    if(output)
                         break;
+                    
                 }               
             }
         }

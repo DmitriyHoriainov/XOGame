@@ -61,3 +61,15 @@ E:\GithubXO\XOGame\GameXoProd\GameClient\GameClient\obj\Debug\GameClient.MainFor
 E:\GithubXO\XOGame\GameXoProd\GameClient\GameClient\obj\Debug\GameClient.PlayersList.resources
 E:\GithubXO\XOGame\GameXoProd\GameClient\GameClient\obj\Debug\GameClient.Properties.Resources.resources
 E:\GithubXO\XOGame\GameXoProd\GameClient\GameClient\obj\Debug\GameClient.csproj.GenerateResource.Cache
+C:\GitXONew\XOGame\GameXoProd\GameClient\GameClient\bin\Debug\GameClient.exe.config
+C:\GitXONew\XOGame\GameXoProd\GameClient\GameClient\obj\Debug\GameClient.exe
+C:\GitXONew\XOGame\GameXoProd\GameClient\GameClient\obj\Debug\GameClient.pdb
+C:\GitXONew\XOGame\GameXoProd\GameClient\GameClient\bin\Debug\GameClient.exe
+C:\GitXONew\XOGame\GameXoProd\GameClient\GameClient\bin\Debug\GameClient.pdb
+C:\GitXONew\XOGame\GameXoProd\GameClient\GameClient\obj\Debug\GameClient.csprojResolveAssemblyReference.cache
+C:\GitXONew\XOGame\GameXoProd\GameClient\GameClient\obj\Debug\GameClient.AskRequest.resources
+C:\GitXONew\XOGame\GameXoProd\GameClient\GameClient\obj\Debug\GameClient.GameXO.resources
+C:\GitXONew\XOGame\GameXoProd\GameClient\GameClient\obj\Debug\GameClient.MainForm.resources
+C:\GitXONew\XOGame\GameXoProd\GameClient\GameClient\obj\Debug\GameClient.PlayersList.resources
+C:\GitXONew\XOGame\GameXoProd\GameClient\GameClient\obj\Debug\GameClient.Properties.Resources.resources
+C:\GitXONew\XOGame\GameXoProd\GameClient\GameClient\obj\Debug\GameClient.csproj.GenerateResource.Cache

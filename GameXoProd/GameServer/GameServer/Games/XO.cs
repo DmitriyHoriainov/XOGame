@@ -39,6 +39,16 @@ namespace GameServer
             StreamWriter writer1 = new StreamWriter(player1.user.GetStream());
             StreamWriter writer2 = new StreamWriter(player2.user.GetStream());
            
+            writer1.Flush();
+            if(input=="StopGame")
+            {
+               
+                writer2.WriteLine("gamexo" + "," + "fail");
+                writer2.Flush();
+                writer1.WriteLine("gamexo" + "," + "victory");
+                writer1.Flush();
+                return true;
+            }
             if (player1turn && player1.Equals(player)) // player1 turn
             {
                 string turn1 = input;
@@ -48,7 +58,7 @@ namespace GameServer
                 writer2.Flush();
                 writer1.WriteLine("gamexo" + "," + turn1 + "," + "X");
                 writer1.Flush();
-
+                
                 if (res1 == "victory")
                 {
                     writer1.WriteLine("gamexo" + "," + "victory");
@@ -129,10 +139,11 @@ namespace GameServer
             {
                 matrix[Convert.ToInt32(message)] = 1;
             }
-            if (Checking() == 1)
+            if (Checking() == 1 )
                 return "victory";
-            if (Checking() == -1)
+            if (Checking() == -1 )
                 return "standoff";
+           
             else return "";
         }
         public string Turn2(string message)
@@ -172,6 +183,7 @@ namespace GameServer
                     res = -1;
                 }
             }
+           
             return res;
         }
     }

@@ -27,9 +27,9 @@ namespace GameClient
             {
                 MessageBox.Show("Empty username! Enter username, pleasure!");
             }
-            else if (tbLogin.Text.Length > 25)
+            else if (tbLogin.Text.Length > 20)
             {
-                MessageBox.Show("Very long username! Enter username till 25 symbols.");
+                MessageBox.Show("Very long username! Enter username till 20 symbols.");
             }
             else
             {
@@ -37,6 +37,11 @@ namespace GameClient
                 pl.Show();
                 this.Hide();
             }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

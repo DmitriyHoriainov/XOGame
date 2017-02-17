@@ -147,6 +147,7 @@
             this.Controls.Add(this.btn0);
             this.Name = "GameXO";
             this.Text = "GameXO";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameXO_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

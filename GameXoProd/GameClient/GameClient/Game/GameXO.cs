@@ -23,6 +23,7 @@ namespace GameClient
             this.stream = stream;
             this.Text = name;
             this.name = name;
+            CheckForIllegalCrossThreadCalls = false;
         }
 
         public void ShowForm()
@@ -30,6 +31,7 @@ namespace GameClient
             this.ShowDialog();
         }
         
+       
         private void button7_Click(object sender, EventArgs e)
         {
             SendInfo("6");
@@ -89,11 +91,15 @@ namespace GameClient
             if (msg[1] == "victory")
             {
                 MessageBox.Show("Congratulations! You won!");
+               
+                
+                this.Close();
                 return;
             }
             else if (msg[1] == "fail")
             {
                 MessageBox.Show("Sorry, you lost this game.");
+                this.Close();
                 return;
             }
             else if (msg[1] == "standoff")
@@ -103,7 +109,8 @@ namespace GameClient
             }
             if(msg[1] == "yourturn")
             {
-                lb_turn.Invoke(new Action(() => { lb_turn.Text = "Choose the cell"; }));
+               // lb_turn.Invoke(new Action(() => { lb_turn.Text = "Choose the cell"; }));
+                lb_turn.Text = "Choose the cell";
                 return;
             }
             if (msg[1] == "notyourturn")
@@ -119,6 +126,13 @@ namespace GameClient
             {
                 btn.Invoke(new Action(() => { btn.Text = msg[2]; }));
             }
+        }
+
+        private void GameXO_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            StreamWriter sw = new StreamWriter(stream);
+            sw.WriteLine("games,gamexo," + name + "," +"StopGame");
+            sw.Flush();
         }
     }
 }

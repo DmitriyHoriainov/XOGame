@@ -25,3 +25,9 @@ E:\gamexo\GameServer\GameServer\obj\Debug\GameServer.pdb
 E:\gamexo\GameServer\GameServer\bin\Debug\GameServer.exe
 E:\gamexo\GameServer\GameServer\bin\Debug\GameServer.pdb
 E:\gamexo\GameServer\GameServer\obj\Debug\GameServer.csprojResolveAssemblyReference.cache
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\GameServer.exe.config
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\obj\Debug\GameServer.exe
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\obj\Debug\GameServer.pdb
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\GameServer.exe
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\GameServer.pdb
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\obj\Debug\GameServer.csprojResolveAssemblyReference.cache
