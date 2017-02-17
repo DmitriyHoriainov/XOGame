@@ -103,6 +103,7 @@
             this.Controls.Add(this.btnInvite);
             this.Controls.Add(this.cbGame);
             this.Controls.Add(this.lbPlayers);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "PlayersList";
             this.Text = "PlayersList";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PlayersList_FormClosed);

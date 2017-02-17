@@ -70,6 +70,7 @@
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnYes);
             this.Controls.Add(this.lRequest);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AskRequest";
             this.Text = "AskRequest";
             this.ResumeLayout(false);

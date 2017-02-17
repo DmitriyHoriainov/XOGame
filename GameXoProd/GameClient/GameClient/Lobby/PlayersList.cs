@@ -64,6 +64,7 @@ namespace GameClient
             StreamWriter sw = new StreamWriter(stream);
             sw.WriteLine("lobby,invite" + "," + player1 + "," + player2 + "," + gameid);
             sw.Flush();
+            Thread.Sleep(100);
         }
 
         private void PlayersList_FormClosed(object sender, FormClosedEventArgs e)
@@ -77,8 +78,9 @@ namespace GameClient
         private void RefreshPlayers_Click(object sender, EventArgs e)
         {
             StreamWriter sw = new StreamWriter(stream);
-            sw.WriteLine("list" + "," + lb_name.Text);
+            sw.WriteLine("list" + "," +"");
             sw.Flush();
+            Thread.Sleep(100);
         }
     }
 }

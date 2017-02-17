@@ -43,7 +43,7 @@ namespace GameServer
             if(input=="StopGame")
             {
 
-                writer2.WriteLine("gamexo" + "," + "victory");
+                writer2.WriteLine("gamexo" + "," + "fail");
                 writer2.Flush();
                 player1.status = "0";
               
@@ -66,6 +66,9 @@ namespace GameServer
                 {
                     writer1.WriteLine("gamexo" + "," + "victory");
                     writer1.Flush();
+                    player1.status = "0";
+
+                    player2.status = "0";
                     writer2.WriteLine("gamexo" + "," + "fail");
                     writer2.Flush();
 

@@ -67,6 +67,7 @@
             this.Controls.Add(this.lb_hint);
             this.Controls.Add(this.tbLogin);
             this.Controls.Add(this.btnLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
             this.Text = "Authorize";
             this.Load += new System.EventHandler(this.MainForm_Load);

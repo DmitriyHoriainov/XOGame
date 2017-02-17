@@ -27,7 +27,13 @@ namespace GameServer
                         switch (msg[5])
                         {
                             case "XO":
-                                gameList.Add(new XO(commandManager.connectionList.GetClient(msg[3]), commandManager.connectionList.GetClient(msg[4])));
+                                Random ran = new Random();
+                                int variant = ran.Next(0, 2);
+                                if (variant == 1)
+                                {
+                                    gameList.Add(new XO(commandManager.connectionList.GetClient(msg[3]), commandManager.connectionList.GetClient(msg[4])));
+                                }
+                                else gameList.Add(new XO(commandManager.connectionList.GetClient(msg[4]), commandManager.connectionList.GetClient(msg[3])));
                                 commandManager.connectionList.GetClient(msg[3]).status = "1";
                                 commandManager.connectionList.GetClient(msg[4]).status = "1";
                                 commandManager.Dispatcher("list");
