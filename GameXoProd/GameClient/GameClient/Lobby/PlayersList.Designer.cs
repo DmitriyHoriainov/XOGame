@@ -33,6 +33,7 @@
             this.btnInvite = new System.Windows.Forms.Button();
             this.lb_players = new System.Windows.Forms.Label();
             this.lb_name = new System.Windows.Forms.Label();
+            this.RefreshPlayers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbPlayers
@@ -81,11 +82,22 @@
             this.lb_name.TabIndex = 4;
             this.lb_name.Text = "label1";
             // 
+            // RefreshPlayers
+            // 
+            this.RefreshPlayers.Location = new System.Drawing.Point(219, 93);
+            this.RefreshPlayers.Name = "RefreshPlayers";
+            this.RefreshPlayers.Size = new System.Drawing.Size(113, 23);
+            this.RefreshPlayers.TabIndex = 5;
+            this.RefreshPlayers.Text = "Refresh Players";
+            this.RefreshPlayers.UseVisualStyleBackColor = true;
+            this.RefreshPlayers.Click += new System.EventHandler(this.RefreshPlayers_Click);
+            // 
             // PlayersList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 319);
+            this.Controls.Add(this.RefreshPlayers);
             this.Controls.Add(this.lb_name);
             this.Controls.Add(this.lb_players);
             this.Controls.Add(this.btnInvite);
@@ -106,5 +118,6 @@
         private System.Windows.Forms.Button btnInvite;
         private System.Windows.Forms.Label lb_players;
         public System.Windows.Forms.Label lb_name;
+        private System.Windows.Forms.Button RefreshPlayers;
     }
 }

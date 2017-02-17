@@ -27,7 +27,9 @@ namespace GameClient
             netStream = client.GetStream();
             Thread receiveThread = new Thread(new ThreadStart(ReceiveData));
             receiveThread.Start();
+           
             SendLogin(name);
+            
             this.playersList = pl;
             playersList.name = name;
             playersList.stream = netStream;
@@ -39,7 +41,7 @@ namespace GameClient
             sw.WriteLine(name+","+"0");
             sw.Flush();
         }
-
+       
         void ReceiveData()
         {
             while (true)
