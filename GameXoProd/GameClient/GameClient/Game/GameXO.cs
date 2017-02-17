@@ -105,6 +105,8 @@ namespace GameClient
             else if (msg[1] == "standoff")
             {
                 MessageBox.Show("It's draw!");
+                
+                this.Close();
                 return;
             }
             if(msg[1] == "yourturn")
