@@ -26,6 +26,8 @@ namespace GameServer
                 case "exit":
                     commandManager.connectionList.Remove(commandManager.connectionList.GetClient(msg[2]));
                     break;
+               
+
             }
         }
     }

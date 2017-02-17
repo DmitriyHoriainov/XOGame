@@ -28,6 +28,8 @@ namespace GameServer
                         {
                             case "XO":
                                 gameList.Add(new XO(commandManager.connectionList.GetClient(msg[3]), commandManager.connectionList.GetClient(msg[4])));
+                                commandManager.connectionList.GetClient(msg[3]).status = "1";
+                                commandManager.connectionList.GetClient(msg[4]).status = "1";
                                 break;
                         }
                     }

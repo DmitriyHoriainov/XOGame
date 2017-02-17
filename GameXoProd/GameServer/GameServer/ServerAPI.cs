@@ -35,8 +35,9 @@ namespace GameServer
             {
                 var connectedClient = serverListener.AcceptTcpClient();
                 StreamReader sr = new StreamReader(connectedClient.GetStream());
-                string input = sr.ReadLine();
-                connectionList.AddList(new Client(input, connectedClient));
+                string inp = sr.ReadLine();
+                string[] input = inp.Split(',');
+                connectionList.AddList(new Client(input[0], connectedClient,input[1]));
             }
         }
 

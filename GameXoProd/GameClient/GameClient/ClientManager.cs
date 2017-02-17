@@ -36,7 +36,7 @@ namespace GameClient
         void SendLogin(string name)
         {
             StreamWriter sw = new StreamWriter(netStream);
-            sw.WriteLine(name);
+            sw.WriteLine(name+","+"0");
             sw.Flush();
         }
 
@@ -72,7 +72,7 @@ namespace GameClient
                         break;
                     case "gamexo":
                         game.ReceiveGameData(output);
-                    //    if(output)
+                   
                         break;
                     
                 }               

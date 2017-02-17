@@ -41,6 +41,7 @@ namespace GameClient
         private void btnYes_Click(object sender, EventArgs e)
         {
             Ask(player2, player1, gameid, "Yes");
+            
             this.Close();
         }
 

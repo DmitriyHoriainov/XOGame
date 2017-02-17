@@ -22,6 +22,7 @@ namespace GameClient
         {
             InitializeComponent();
             cbGame.SelectedIndex = 0;
+            CheckForIllegalCrossThreadCalls = false;
         }
         
 
@@ -30,7 +31,9 @@ namespace GameClient
             lbPlayers.Invoke(new Action(() => { lbPlayers.Items.Clear(); }));
             for (int i = 1; i < items.Length; i++)
             {
-                lbPlayers.Invoke(new Action(() => { lbPlayers.Items.Add(items[i]); }));
+                string[] statuscont = items[i].Split('#');
+                if(statuscont[1]!="1")
+                lbPlayers.Items.Add(statuscont[0]); 
             }
         }
 
@@ -59,6 +62,13 @@ namespace GameClient
             sw.WriteLine("lobby,exit" + "," + lb_name.Text);
             sw.Flush();
             Environment.Exit(0);         
+        }
+
+        private void RefreshPlayers_Click(object sender, EventArgs e)
+        {
+            StreamWriter sw = new StreamWriter(stream);
+            sw.WriteLine("list" + "," + lb_name.Text);
+            sw.Flush();
         }
     }
 }

@@ -44,7 +44,9 @@ namespace GameServer
             {
                
                 writer2.WriteLine("gamexo" + "," + "fail");
+                player1.status = "0";
                 writer2.Flush();
+                player2.status = "0";
                 writer1.WriteLine("gamexo" + "," + "victory");
                 writer1.Flush();
                 return true;
@@ -72,8 +74,10 @@ namespace GameServer
                 if (res1 == "standoff")
                 {
                     writer1.WriteLine("gamexo" + "," + "standoff");
+                    player1.status = "0";
                     writer1.Flush();
                     writer2.WriteLine("gamexo" + "," + "standoff");
+                    player2.status = "0";
                     writer2.Flush();
 
                     return true;
@@ -103,8 +107,10 @@ namespace GameServer
                 if (res2 == "victory")
                 {
                     writer1.WriteLine("gamexo" + "," + "fail");
+                    player1.status = "0";
                     writer1.Flush();
                     writer2.WriteLine("gamexo" + "," + "victory");
+                    player2.status = "0";
                     writer2.Flush();
 
                     return true;
@@ -113,8 +119,10 @@ namespace GameServer
                 if (res2 == "standoff")
                 {
                     writer1.WriteLine("gamexo" + "," + "standoff");
+                    player1.status = "0";
                     writer1.Flush();
                     writer2.WriteLine("gamexo" + "," + "standoff");
+                    player2.status = "0";
                     writer2.Flush();
 
                     return true;
