@@ -42,8 +42,9 @@ namespace GameServer
             writer1.Flush();
             if(input=="StopGame")
             {
-               
-               
+
+                writer2.WriteLine("gamexo" + "," + "victory");
+                writer2.Flush();
                 player1.status = "0";
               
                 player2.status = "0";

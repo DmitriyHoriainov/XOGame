@@ -36,6 +36,16 @@ namespace GameClient
                 lbPlayers.Items.Add(statuscont[0]); 
             }
         }
+        public bool CheckGameStatus(string name)
+        {
+            if (lbPlayers.Items.Count != 0)
+            {
+                if (lbPlayers.Items.Contains(name))
+                    return true;
+                else return false;
+            }
+            else return false;
+        }
 
         private void btnInvite_Click(object sender, EventArgs e)
         {

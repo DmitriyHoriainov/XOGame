@@ -60,7 +60,7 @@ namespace GameClient
                         playersList.AddList(msg);
                         break;
                     case "invite":
-                        AskRequest ar = new AskRequest(msg[1], msg[2], msg[3], netStream);
+                        AskRequest ar = new AskRequest(msg[1], msg[2], msg[3], netStream,playersList);
                         Thread tr = new Thread(new ThreadStart(ar.ShowForm));
                         tr.Start();
                         break;
