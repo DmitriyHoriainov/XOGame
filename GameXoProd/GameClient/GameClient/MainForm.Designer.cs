@@ -35,9 +35,9 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(58, 62);
+            this.btnLogin.Location = new System.Drawing.Point(32, 62);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(196, 23);
             this.btnLogin.TabIndex = 1;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -47,13 +47,13 @@
             // 
             this.tbLogin.Location = new System.Drawing.Point(32, 36);
             this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(127, 20);
+            this.tbLogin.Size = new System.Drawing.Size(196, 20);
             this.tbLogin.TabIndex = 2;
             // 
             // lb_hint
             // 
             this.lb_hint.AutoSize = true;
-            this.lb_hint.Location = new System.Drawing.Point(29, 20);
+            this.lb_hint.Location = new System.Drawing.Point(85, 20);
             this.lb_hint.Name = "lb_hint";
             this.lb_hint.Size = new System.Drawing.Size(81, 13);
             this.lb_hint.TabIndex = 3;
@@ -63,7 +63,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(187, 113);
+            this.ClientSize = new System.Drawing.Size(240, 113);
             this.Controls.Add(this.lb_hint);
             this.Controls.Add(this.tbLogin);
             this.Controls.Add(this.btnLogin);

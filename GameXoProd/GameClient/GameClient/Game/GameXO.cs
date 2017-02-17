@@ -28,52 +28,71 @@ namespace GameClient
 
         public void ShowForm()
         {
+          
             this.ShowDialog();
         }
         
        
         private void button7_Click(object sender, EventArgs e)
         {
+          //  var button = sender as Button;
+           // button.Enabled = false;
             SendInfo("6");
         }
 
         private void btn1_Click(object sender, EventArgs e)
         {
+           // var button = sender as Button;
+           // button.Enabled = false;
             SendInfo("0");
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
+           // var button = sender as Button;
+           // button.Enabled = false;
             SendInfo("1");
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
+          //  var button = sender as Button;
+           // button.Enabled = false;
             SendInfo("2");
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
+           // var button = sender as Button;
+           // button.Enabled = false;
             SendInfo("3");
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
+           // var button = sender as Button;
+           // button.Enabled = false;
             SendInfo("4");
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
+           // var button = sender as Button;
+           // button.Enabled = false;
             SendInfo("5");
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
+           // var button = sender as Button;
+           // button.Enabled = false;
             SendInfo("7");
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
+            //var button = sender as Button;
+           // button.Enabled = false;
             SendInfo("8");
         }       
 
@@ -126,7 +145,9 @@ namespace GameClient
             var btn = controls[0] as Button;
             if (msg[1] != null)
             {
-                btn.Invoke(new Action(() => { btn.Text = msg[2]; }));
+               
+                btn.Text = msg[2];
+                btn.Enabled = false;
             }
         }
 
