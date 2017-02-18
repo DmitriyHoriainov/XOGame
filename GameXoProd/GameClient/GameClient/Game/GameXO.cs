@@ -17,6 +17,7 @@ namespace GameClient
     {
         NetworkStream stream;
         string name;
+       
         public GameXO(NetworkStream stream, string name)
         {
             InitializeComponent();           
@@ -24,12 +25,16 @@ namespace GameClient
             this.Text = name;
             this.name = name;
             CheckForIllegalCrossThreadCalls = false;
+            
         }
 
         public void ShowForm()
         {
-          
-            this.ShowDialog();
+           
+           
+                this.ShowDialog();
+             
+           
         }
         
        

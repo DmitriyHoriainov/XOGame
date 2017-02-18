@@ -17,6 +17,7 @@ namespace GameClient
         string player1;
         string player2;
         string gameid;
+        
         NetworkStream stream;
        PlayersList playerList;
         public AskRequest()

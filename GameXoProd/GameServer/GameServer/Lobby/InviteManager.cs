@@ -12,8 +12,11 @@ namespace GameServer
         public void SendInvite(Client player1, Client player2, string gameid)
         {
             StreamWriter writer = new StreamWriter(player2.user.GetStream());
-            writer.WriteLine("invite," + player1.name + "," + player2.name + "," + gameid);
-            writer.Flush();
+            if (player1.status != "1" || player2.status != "1")
+            {
+                writer.WriteLine("invite," + player1.name + "," + player2.name + "," + gameid);
+                writer.Flush();
+            }
         }
     }
 }

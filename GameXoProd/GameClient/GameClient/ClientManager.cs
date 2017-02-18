@@ -16,6 +16,7 @@ namespace GameClient
         public NetworkStream netStream;
         PlayersList playersList;
         IGame game;
+        
       
 
         public ClientManager(){}
@@ -62,14 +63,21 @@ namespace GameClient
                         playersList.AddList(msg);
                         break;
                     case "invite":
-                        AskRequest ar = new AskRequest(msg[1], msg[2], msg[3], netStream,playersList);
-                        Thread tr = new Thread(new ThreadStart(ar.ShowForm));
-                        tr.Start();
+                        
+                        
+                            AskRequest ar = new AskRequest(msg[1], msg[2], msg[3], netStream, playersList);
+                            Thread tr = new Thread(new ThreadStart(ar.ShowForm));
+                            tr.Start();
+                           
+                       
+                        
+                      
                         break;
                     case "ask":
                         if (msg[1] == "XO")
                         {
                             game = new GameXO(netStream, playersList.name);
+                            
                             Thread tr1 = new Thread(new ThreadStart(game.ShowForm));
                             tr1.Start();
                         }

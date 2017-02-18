@@ -70,6 +70,9 @@ namespace GameClient
 
         private void PlayersList_FormClosed(object sender, FormClosedEventArgs e)
         {
+         
+            
+          
             StreamWriter sw = new StreamWriter(stream);
             sw.WriteLine("lobby,exit" + "," + lb_name.Text);
             sw.Flush();
@@ -82,6 +85,13 @@ namespace GameClient
             sw.WriteLine("list" + "," +"");
             sw.Flush();
             Thread.Sleep(100);
+        }
+
+        private void PlayersList_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            StreamWriter sw = new StreamWriter(stream);
+            sw.WriteLine("games,gamexo," + name + "," + "StopGame");
+            sw.Flush();
         }
     }
 }

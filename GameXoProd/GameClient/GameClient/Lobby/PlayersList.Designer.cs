@@ -106,6 +106,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "PlayersList";
             this.Text = "PlayersList";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PlayersList_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PlayersList_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

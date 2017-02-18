@@ -60,14 +60,17 @@ namespace GameServer
             {
                 return false;
             }
-
-            StreamWriter writer = new StreamWriter(player1.user.GetStream());
-            writer.WriteLine("ask" + "," + "XO");
-            writer.Flush();
-            StreamWriter sw = new StreamWriter(player2.user.GetStream());
-            sw.WriteLine("ask" + "," + "XO");
-            sw.Flush();
-            return true;
+            if (player1.status != "1" && player2.status != "1")
+            {
+                StreamWriter writer = new StreamWriter(player1.user.GetStream());
+                writer.WriteLine("ask" + "," + "XO");
+                writer.Flush();
+                StreamWriter sw = new StreamWriter(player2.user.GetStream());
+                sw.WriteLine("ask" + "," + "XO");
+                sw.Flush();
+                return true;
+            }
+            else return false;
         }    
     }
 }
