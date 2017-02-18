@@ -31,11 +31,13 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.lb_hint = new System.Windows.Forms.Label();
+            this.btnReg = new System.Windows.Forms.Button();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(32, 62);
+            this.btnLogin.Location = new System.Drawing.Point(32, 104);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(196, 23);
             this.btnLogin.TabIndex = 1;
@@ -59,11 +61,30 @@
             this.lb_hint.TabIndex = 3;
             this.lb_hint.Text = "Enter username";
             // 
+            // btnReg
+            // 
+            this.btnReg.Location = new System.Drawing.Point(32, 133);
+            this.btnReg.Name = "btnReg";
+            this.btnReg.Size = new System.Drawing.Size(196, 23);
+            this.btnReg.TabIndex = 4;
+            this.btnReg.Text = "Registration";
+            this.btnReg.UseVisualStyleBackColor = true;
+            this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.Location = new System.Drawing.Point(32, 62);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(196, 20);
+            this.tbPassword.TabIndex = 5;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(240, 113);
+            this.ClientSize = new System.Drawing.Size(240, 195);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.btnReg);
             this.Controls.Add(this.lb_hint);
             this.Controls.Add(this.tbLogin);
             this.Controls.Add(this.btnLogin);
@@ -80,6 +101,8 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.Label lb_hint;
+        private System.Windows.Forms.Button btnReg;
+        private System.Windows.Forms.TextBox tbPassword;
     }
 }
 

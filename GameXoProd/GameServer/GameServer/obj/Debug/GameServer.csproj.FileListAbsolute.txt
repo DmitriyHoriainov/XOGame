@@ -31,3 +31,11 @@ C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\obj\Debug\GameServer.pdb
 C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\GameServer.exe
 C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\GameServer.pdb
 C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\obj\Debug\GameServer.csprojResolveAssemblyReference.cache
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\EntityFramework.dll
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\System.Data.SQLite.dll
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\System.Data.SQLite.EF6.dll
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\System.Data.SQLite.Linq.dll
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\EntityFramework.xml
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\System.Data.SQLite.xml

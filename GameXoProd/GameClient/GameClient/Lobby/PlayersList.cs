@@ -28,7 +28,8 @@ namespace GameClient
 
         public void AddList(string[] items)
         {
-            lbPlayers.Invoke(new Action(() => { lbPlayers.Items.Clear(); }));
+           
+            lbPlayers.Items.Clear();
             for (int i = 1; i < items.Length; i++)
             {
                 string[] statuscont = items[i].Split('#');

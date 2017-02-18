@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -33,15 +34,33 @@ namespace GameClient
             }
             else
             {
-                cm.Connect(tbLogin.Text, pl);
-                pl.Show();
-                this.Hide();
+                cm.Connect(tbLogin.Text,tbPassword.Text, pl,"auth");
+                Thread.Sleep(500);
+                if (!(pl.lb_name.Text == "label1"))
+                {
+                    pl.Show();
+                    this.Hide();
+                }
+                else   MessageBox.Show("Invalid Login or pass");
             }
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnReg_Click(object sender, EventArgs e)
+        {
+            cm.Connect(tbLogin.Text, tbPassword.Text, pl, "reg");
+            Thread.Sleep(500);
+            if (!(pl.lb_name.Text == "label1"))
+            {
+                pl.Show();
+                this.Hide();
+            }
+            else MessageBox.Show("Invalid Login");
         }
     }
 }

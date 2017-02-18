@@ -109,7 +109,7 @@ namespace GameClient
 
             if (msg[1] == "victory")
             {
-                MessageBox.Show("Congratulations! You won!");
+                MessageBox.Show("Congratulations! "+name+" won!");
                
                 
                 this.Close();
@@ -117,7 +117,7 @@ namespace GameClient
             }
             else if (msg[1] == "fail")
             {
-                MessageBox.Show("Sorry, you lost this game.");
+                MessageBox.Show("Sorry, " +name+" lost this game.");
                 this.Close();
                 return;
             }

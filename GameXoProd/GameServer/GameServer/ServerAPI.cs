@@ -15,6 +15,7 @@ namespace GameServer
         TcpListener serverListener;
         ConnectionList connectionList;
         CommandManager commandManager;
+        DataBaseManager dbmanager;
         public ServerAPI()
         {
             connectionList = new ConnectionList();
@@ -24,6 +25,7 @@ namespace GameServer
             threadConnection.Start();
             Console.WriteLine("Server started!");
             commandManager = new CommandManager(connectionList);
+            dbmanager = new DataBaseManager();
         }
 
         private void ConnectionLoop()
@@ -36,8 +38,20 @@ namespace GameServer
                 var connectedClient = serverListener.AcceptTcpClient();
                 StreamReader sr = new StreamReader(connectedClient.GetStream());
                 string inp = sr.ReadLine();
+                
                 string[] input = inp.Split(',');
-                connectionList.AddList(new Client(input[0], connectedClient,input[1]));
+                if (dbmanager.CreateNewLogin(input[0], input[1], input[3]))
+                {
+
+                    Client cl = connectionList.clientList.Find(c => c.name == input[0]);
+                    if ( cl == null )
+                    
+                        
+                        
+                    connectionList.AddList(new Client(input[0], connectedClient, input[2]));
+                 
+                }
+               
             }
         }
 

@@ -16,10 +16,11 @@ namespace GameClient
         public NetworkStream netStream;
         PlayersList playersList;
         IGame game;
+      
 
         public ClientManager(){}
 
-        public void Connect(string name, PlayersList pl)
+        public void Connect(string name,string password, PlayersList pl,string status)
         {
             IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8888);   
             client = new TcpClient();
@@ -28,17 +29,17 @@ namespace GameClient
             Thread receiveThread = new Thread(new ThreadStart(ReceiveData));
             receiveThread.Start();
            
-            SendLogin(name);
-            
+            SendLogin(name,password,status);
+           
             this.playersList = pl;
             playersList.name = name;
             playersList.stream = netStream;
         }
 
-        void SendLogin(string name)
+        void SendLogin(string name,string password,string status)
         {
             StreamWriter sw = new StreamWriter(netStream);
-            sw.WriteLine(name+","+"0");
+            sw.WriteLine(name+","+password+ ","+"0"+","+status);
             sw.Flush();
         }
        
@@ -54,7 +55,8 @@ namespace GameClient
                 switch(msg[0])
                 {
                     case "name":
-                        playersList.lb_name.Invoke(new Action(() => { playersList.lb_name.Text = msg[1]; }));
+                      
+                        playersList.lb_name.Text = msg[1];
                         break;
                     case "list":
                         playersList.AddList(msg);
@@ -77,6 +79,7 @@ namespace GameClient
                    
                         break;
                     
+
                 }               
             }
         }
