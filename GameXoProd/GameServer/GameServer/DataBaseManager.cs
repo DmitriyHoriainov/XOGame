@@ -10,7 +10,7 @@ namespace GameServer
 {
     class DataBaseManager
     {
-        string databaseName = @"C:\GitXONew\XOGame\GameXoProd\GameServer\GameServer\bin\Debug\XOACCOUNTDB.db";
+        string databaseName = @"XOACCOUNTDB.db";
         string tablename = "PersonalData";
         SQLiteConnection connection;
         public DataBaseManager() { }

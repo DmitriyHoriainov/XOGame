@@ -40,7 +40,7 @@
             this.btnLogin.Location = new System.Drawing.Point(32, 104);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(196, 23);
-            this.btnLogin.TabIndex = 1;
+            this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -66,7 +66,7 @@
             this.btnReg.Location = new System.Drawing.Point(32, 133);
             this.btnReg.Name = "btnReg";
             this.btnReg.Size = new System.Drawing.Size(196, 23);
-            this.btnReg.TabIndex = 4;
+            this.btnReg.TabIndex = 5;
             this.btnReg.Text = "Registration";
             this.btnReg.UseVisualStyleBackColor = true;
             this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
@@ -76,7 +76,7 @@
             this.tbPassword.Location = new System.Drawing.Point(32, 62);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(196, 20);
-            this.tbPassword.TabIndex = 5;
+            this.tbPassword.TabIndex = 3;
             // 
             // MainForm
             // 

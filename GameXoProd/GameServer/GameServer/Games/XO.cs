@@ -183,7 +183,7 @@ namespace GameServer
                 || ((matrix[3] == 1 && matrix[4] == 1 && matrix[5] == 1) || (matrix[3] == 2 && matrix[4] == 2 && matrix[5] == 2))
                 || ((matrix[6] == 1 && matrix[7] == 1 && matrix[8] == 1) || (matrix[6] == 2 && matrix[7] == 2 && matrix[8] == 2)))
                 res = 1;
-
+            else
             for (int i = 0; i < matrix.Length; i++)
             {
                 if (matrix[i] == 0)
